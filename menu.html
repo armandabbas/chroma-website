@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu – Chroma Deli München</title>
+    <meta name="description" content="Die Speise- und Getränkekarte von Chroma – Deli & Gift Shop in München, Barer Straße 38, Eingang Gabelsbergerstraße. Kuratierte Delikatessen, Naturweine und mehr." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Lokales SEO: Geo-Meta-Tags -->
+    <meta name="geo.region" content="DE-BY" />
+    <meta name="geo.placename" content="München" />
+    <meta name="geo.position" content="48.1466799;11.5708972" />
+    <meta name="ICBM" content="48.1466799, 11.5708972" />
+
+    <link rel="canonical" href="https://www.chroma-deli.com/menu.html" />
+    <link rel="icon" type="image/png" href="public/favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.chroma-deli.com/menu.html" />
+    <meta property="og:image" content="https://www.chroma-deli.com/favicon.png" />
+    <meta property="og:title" content="Menu – Chroma Deli München" />
+    <meta property="og:description" content="Speise- und Getränkekarte von Chroma – Deli & Gift Shop in München, Barer Straße 38, Maxvorstadt." />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Chroma Deli & Gift Shop" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Menu – Chroma Deli München" />
+    <meta name="twitter:description" content="Speise- und Getränkekarte von Chroma in der Barer Straße 38, München." />
+    <meta name="twitter:image" content="https://www.chroma-deli.com/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Strukturierte Daten: Menu / FoodEstablishment -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Chroma Deli & Gift Shop",
+      "description": "Chroma ist ein kuratiertes Deli in München (Maxvorstadt) mit ausgesuchten Delikatessen, Naturweinen und hochwertigen Getränken.",
+      "url": "https://www.chroma-deli.com/menu.html",
+      "hasMenu": "https://www.chroma-deli.com/menu.html",
+      "servesCuisine": ["Deli", "Europäisch", "International"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Barer Straße 38, Eingang Gabelsbergerstraße",
+        "addressLocality": "München",
+        "addressRegion": "Bayern",
+        "postalCode": "80333",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1466799,
+        "longitude": 11.5708972
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <a href="index.html" class="corner-logo-link">
+      <img src="./src/assets/Logo.png" alt="Chroma" class="corner-logo" />
+    </a>
+    <div class="app-container">
+      <h1 class="sr-only">Menu – Chroma Deli München</h1>
+      <p class="sr-only">
+        Die Speise- und Getränkekarte von Chroma – Deli &amp; Gift Shop in München.
+        Chroma bietet kuratierte Delikatessen, Naturweine und hochwertige Getränke.
+        Standort: Barer Straße 38, Eingang Gabelsbergerstraße, 80333 München (Maxvorstadt).
+      </p>
+      <div class="page-content">
+        <nav class="nav-buttons events-nav">
+          <div class="menu-board-container">
+            <img src="./src/assets/Menu.svg" alt="Menu Board – Chroma Deli München" class="menu-board" />
+            <img src="./src/assets/bee.png" alt="bee" class="decor menu-bee" />
+          </div>
+          <a href="index.html" class="nav-btn back-btn">Go Back</a>
+        </nav>
+      </div>
+      <div class="decor menu-cidre-group">
+        <img src="./src/assets/bottle.png" alt="bottle" class="cidre-bottle" />
+        <img src="./src/assets/glass.png" alt="glass" class="cidre-glass" />
+      </div>
+      <!-- Decorations -->
+      <img src="./src/assets/sandwich.png" alt="sandwich" class="decor sandwich" />
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const bee = document.querySelector('.menu-bee');
+        if (bee) {
+          bee.addEventListener('click', () => {
+            bee.classList.add('fly-away');
+          });
+        }
+      });
+    </script>
+    <script src="./transition.js"></script>
+  </body>
+</html>
