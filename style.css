@@ -907,3 +907,234 @@ body {
 .click-blob.expand {
   transform: translate(-50%, -50%) scale(150) rotate(45deg);
 }
+
+/* Rechtliche Seiten: dezente Footer-Links */
+.legal-links {
+  position: fixed;
+  bottom: 0.6rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+}
+
+.legal-links a {
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.legal-links .legal-sep {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .legal-links {
+    right: 0;
+    left: 0;
+    justify-content: center;
+    bottom: 0.4rem;
+    font-size: 0.6rem;
+  }
+}
+
+/* Impressum & Datenschutzerklärung */
+.legal-page .app-container {
+  align-items: center;
+  overflow-y: auto;
+}
+
+.legal-card {
+  background: #fff;
+  color: #1a1a1a;
+  text-transform: none;
+  text-align: left;
+  width: 100%;
+  max-width: 720px;
+  margin: 8vh auto 4rem;
+  padding: 2.5rem clamp(1.25rem, 4vw, 3rem);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.legal-card h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.legal-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.legal-card p {
+  margin-bottom: 0.9rem;
+}
+
+.legal-card ul {
+  margin: 0 0 0.9rem 1.2rem;
+}
+
+.legal-card li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-card a {
+  color: #0d7d86;
+  text-decoration: underline;
+}
+
+.legal-card .legal-updated {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.legal-card .legal-crosslink {
+  margin-top: 0.5rem;
+}
+
+/* Impressum & Datenschutz: randlos, ohne Scroll, kompakte Spaltendarstellung */
+body.impressum-flat .app-container,
+body.datenschutz-flat .app-container {
+  overflow: hidden;
+  align-items: stretch;
+  justify-content: center;
+  padding-top: clamp(9rem, 20vh, 13rem);
+  padding-bottom: clamp(2rem, 5vh, 3rem);
+}
+
+.legal-flat {
+  color: #16302e;
+  text-transform: none;
+  text-align: left;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: 'Jost', sans-serif;
+}
+
+.legal-flat-head {
+  flex-shrink: 0;
+  margin-bottom: clamp(0.6rem, 1.6vh, 1.2rem);
+}
+
+.legal-flat-head h1 {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.legal-flat-head .legal-note {
+  font-size: 0.75rem;
+  color: rgba(22, 48, 46, 0.7);
+  margin-top: 0.2rem;
+}
+
+.legal-columns {
+  flex: 0 1 auto;
+  min-height: 0;
+  margin: auto 0;
+  column-count: 3;
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+  font-size: clamp(0.7rem, 1.3vw, 1rem);
+  line-height: 1.5;
+}
+
+.legal-columns section {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin-bottom: clamp(0.5rem, 1.4vh, 1rem);
+}
+
+.legal-columns h2 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+.legal-columns p {
+  margin: 0 0 0.4em;
+}
+
+.legal-columns p:last-child {
+  margin-bottom: 0;
+}
+
+/* Datenschutz hat spürbar mehr Text als Impressum -> dichtere Variante */
+.legal-columns--dense {
+  column-count: 4;
+  font-size: clamp(0.58rem, 0.85vw, 0.72rem);
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .legal-columns--dense {
+    column-count: 3;
+  }
+}
+
+.legal-columns a {
+  color: #0d7d86;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.legal-flat-foot {
+  flex-shrink: 0;
+  margin-top: clamp(0.6rem, 1.6vh, 1.2rem);
+  font-size: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.legal-flat-foot a {
+  color: #16302e;
+  text-decoration: underline;
+}
+
+.legal-flat-foot .legal-sep {
+  color: rgba(22, 48, 46, 0.4);
+}
+
+.legal-flat-foot .legal-updated {
+  color: rgba(22, 48, 46, 0.6);
+}
+
+@media (max-width: 900px) {
+  .legal-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  body.impressum-flat .app-container,
+  body.datenschutz-flat .app-container {
+    overflow-y: auto;
+    padding-top: 5.5rem;
+  }
+  .legal-columns {
+    column-count: 1;
+    font-size: 0.8rem;
+  }
+}
