@@ -185,35 +185,25 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const dj = document.querySelector('.dj-decor');
-        const music = document.querySelector('.music-decor');
-        const balloons = document.querySelectorAll('.balloon-decor');
         const bee = document.querySelector('.events-bee');
 
         if (bee) {
           bee.addEventListener('click', () => {
+            const rect = bee.getBoundingClientRect();
+            bee.style.left = rect.left + 'px';
+            bee.style.bottom = (window.innerHeight - rect.bottom) + 'px';
+            bee.style.animation = 'none';
+            void bee.offsetWidth;
             bee.classList.add('fly-away');
-            if (dj) dj.click();
           });
         }
 
         if (dj) {
           dj.style.cursor = 'pointer';
           dj.addEventListener('click', () => {
-            // Start dancing
-            dj.classList.add('dance');
-            if (music) music.classList.add('dance');
-
-            // Release balloons
-            balloons.forEach(b => {
-              b.classList.remove('release');
-              void b.offsetWidth; // trigger reflow to restart animation if clicked again
-              b.classList.add('release');
-            });
-
-            // Stop dancing after balloons finish floating (approx 10 seconds)
+            dj.closest('.dj-container').classList.add('dance');
             setTimeout(() => {
-              dj.classList.remove('dance');
-              if (music) music.classList.remove('dance');
+              dj.closest('.dj-container').classList.remove('dance');
             }, 10000);
           });
         }
