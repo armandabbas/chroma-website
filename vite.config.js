@@ -9,7 +9,9 @@ export default defineConfig({
         menu: resolve(__dirname, 'menu.html'),
         events: resolve(__dirname, 'events.html'),
         location: resolve(__dirname, 'location.html'),
-        shop: resolve(__dirname, 'shop.html')
+        shop: resolve(__dirname, 'shop.html'),
+        impressum: resolve(__dirname, 'impressum.html'),
+        datenschutz: resolve(__dirname, 'datenschutz.html')
       }
     }
   }
